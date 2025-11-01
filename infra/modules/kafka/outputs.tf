@@ -3,18 +3,14 @@
 
 output "msk_cluster_arn" {
   description = "The ARN of the MSK cluster."
-  value       = module.msk.msk_cluster_arn
+  # --- FIX: The new module output is named 'arn' ---
+  value       = module.msk.arn
 }
 
 output "bootstrap_brokers_iam" {
   description = "The connection string for IAM-authenticated clients."
-  value       = module.msk.bootstrap_brokers_iam
+  # --- FIX: The new module output for IAM is 'bootstrap_brokers_sasl_iam' ---
+  value       = module.msk.bootstrap_brokers_sasl_iam
   sensitive   = true
 }
-
-output "bootstrap_brokers_tls" {
-  description = "The connection string for TLS-authenticated clients."
-  value       = module.msk.bootstrap_brokers_tls
-  sensitive   = true
-}
-
+# ... existing code ...
