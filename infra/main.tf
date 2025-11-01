@@ -53,7 +53,8 @@ module "bazaar_eks" {
   project_name        = "bazaar"
   vpc_id              = module.bazaar_vpc.vpc_id
   private_subnet_ids  = module.bazaar_vpc.private_subnet_ids
-  eks_cluster_version = "1.29"
+  # --- FIX: Variable is 'cluster_version' in modules/eks/variables.tf ---
+  cluster_version     = "1.29"
 }
 
 # 3. RDS (The "Primary Database")
@@ -63,10 +64,9 @@ module "bazaar_rds" {
   project_name        = "bazaar"
   vpc_id              = module.bazaar_vpc.vpc_id
   private_subnet_ids  = module.bazaar_vpc.private_subnet_ids
-  # --- FIX: Corrected variable name ---
-  eks_cluster_sg_id   = module.bazaar_eks.cluster_security_group_id
+  # --- FIX: Variable is 'eks_cluster_security_group_id' in modules/rds/variables.tf ---
+  eks_cluster_security_group_id = module.bazaar_eks.cluster_security_group_id
   db_username         = "bazaaradmin"
-  # --- FIX: Removed hardcoded password ---
   db_password         = var.db_password
 }
 
@@ -76,10 +76,13 @@ module "bazaar_vpn" {
 
   project_name         = "bazaar"
   vpc_id               = module.bazaar_vpc.vpc_id
-  vpc_cidr             = module.bazaar_vpc.vpc_cidr
+  # --- FIX: 'vpc_cidr' is not an output of the vpc module ---
+  vpc_cidr             = "10.0.0.0/16"
   private_subnet_ids   = module.bazaar_vpc.private_subnet_ids
-  server_cert_arn      = var.client_vpn_server_cert_arn
-  client_cert_arn      = var.client_vpn_client_cert_arn
+  # --- FIX: Variable is 'client_vpn_server_cert_arn' in modules/vpn/variables.tf ---
+  client_vpn_server_cert_arn = var.client_vpn_server_cert_arn
+  # --- FIX: Variable is 'client_vpn_client_cert_arn' in modules/vpn/variables.tf ---
+  client_vpn_client_cert_arn = var.client_vpn_client_cert_arn
 }
 
 # 5. Redis (Caching)
@@ -87,8 +90,10 @@ module "bazaar_redis" {
   source = "./modules/redis"
 
   project_name      = "bazaar"
+  # --- FIX: 'vpc_id' is a required variable in modules/redis/variables.tf ---
+  vpc_id             = module.bazaar_vpc.vpc_id
   private_subnet_ids = module.bazaar_vpc.private_subnet_ids
-  # --- FIX: Corrected variable name ---
+  # --- NO FIX NEEDED: This was correct. 'eks_cluster_sg_id' matches modules/redis/variables.tf ---
   eks_cluster_sg_id  = module.bazaar_eks.cluster_security_group_id
 }
 
@@ -98,9 +103,10 @@ module "bazaar_kafka" {
 
   project_name       = "bazaar"
   vpc_id             = module.bazaar_vpc.vpc_id
-  azs                = module.bazaar_vpc.azs
+  # --- FIX: 'azs' is not an output of the vpc module ---
+  azs                = ["us-east-1a", "us-east-1b", "us-east-1c"]
   private_subnet_ids = module.bazaar_vpc.private_subnet_ids
-  # --- FIX: Corrected variable name ---
-  eks_cluster_sg_id  = module.bazaar_eks.cluster_security_group_id
+  # --- FIX: Using consistent name 'eks_cluster_security_group_id' ---
+  eks_cluster_security_group_id = module.bazaar_eks.cluster_security_group_id
 }
 
