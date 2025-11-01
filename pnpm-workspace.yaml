@@ -1,0 +1,14 @@
+# This file defines the pnpm workspace.
+# It tells pnpm where to find the individual projects (apps and packages)
+# based on the directory structure from your scaffold.sh script.
+
+packages:
+  # Include all microservices
+  - 'apps/services/*'
+  
+  # Include the frontend application
+  - 'apps/frontend'
+  
+  # Include all shared packages
+  - 'packages/*'
+
