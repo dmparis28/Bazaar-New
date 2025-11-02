@@ -6,6 +6,10 @@ module "redis" {
   source  = "terraform-aws-modules/elasticache/aws"
   version = "~> 1.1"
 
+  # --- FIX: Pass the vpc_id to the module ---
+  vpc_id = var.vpc_id
+  # --- END FIX ---
+
   description = "Bazaar Redis cluster for caching"
   subnet_ids  = var.private_subnet_ids
 

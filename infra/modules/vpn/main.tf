@@ -12,7 +12,8 @@ resource "aws_security_group" "vpn_sg" {
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
-    cidr_blocks = ["10.0.0.0/16"] # Adjust this to your VPN client CIDR
+    # --- FIX: Change this to the new client CIDR block ---
+    cidr_blocks = ["10.10.0.0/16"] # Adjust this to your VPN client CIDR
   }
 
   egress {
@@ -31,7 +32,8 @@ resource "aws_security_group" "vpn_sg" {
 resource "aws_ec2_client_vpn_endpoint" "bazaar_vpn" {
   description            = "${var.project_name} Client VPN"
   server_certificate_arn = var.client_vpn_server_cert_arn
-  client_cidr_block      = "10.0.0.0/16" # IP range to assign to clients
+  # --- FIX: Use a non-overlapping CIDR block ---
+  client_cidr_block = "10.10.0.0/16" # IP range to assign to clients
 
   # Use mutual authentication (client + server certs)
   authentication_options {
@@ -69,7 +71,7 @@ resource "aws_ec2_client_vpn_network_association" "vpn_assoc" {
 resource "aws_ec2_client_vpn_authorization_rule" "bazaar_vpn_auth" {
   client_vpn_endpoint_id = aws_ec2_client_vpn_endpoint.bazaar_vpn.id
   
-  target_network_cidr    = var.vpc_cidr # Use the variable, not the module
+  target_network_cidr    = var.vpc_cidr 
 
   authorize_all_groups   = true
   description            = "Allow all clients to access the VPC"
