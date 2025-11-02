@@ -49,7 +49,7 @@ module "rds" {
   identifier = var.db_name
 
   engine               = "postgres"
-  engine_version       = "15.5" # Use a modern, stable version
+  engine_version       = "16.3" # Use a modern, stable version
   family               = "postgres15"
   instance_class       = "db.t3.micro" # Good for dev/testing
   allocated_storage    = 20            # Start small
