@@ -1,6 +1,14 @@
 # [Phase 0] /infra/modules/vpn/main.tf
 # This module provisions the AWS Client VPN Endpoint.
+# --- FIX: Added data sources to find the VPC's internal DNS servers ---
+data "aws_vpc" "main" {
+  id = var.vpc_id
+}
 
+data "aws_vpc_dhcp_options" "main" {
+  # Find the DHCP options set associated with the VPC
+  dhcp_options_id = data.aws_vpc.main.dhcp_options_id
+}
 # 1. Security Group for the VPN
 resource "aws_security_group" "vpn_sg" {
   name        = "${var.project_name}-vpn-sg"
