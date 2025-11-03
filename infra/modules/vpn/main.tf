@@ -13,7 +13,7 @@ resource "aws_security_group" "vpn_sg" {
     to_port     = 0
     protocol    = "-1"
     # --- FIX: Change this to the new client CIDR block ---
-    cidr_blocks = ["10.10.0.0/16"] # Adjust this to your VPN client CIDR
+    cidr_blocks = ["10.10.0.0/16"] # Use the same non-overlapping CIDR
   }
 
   egress {
@@ -46,8 +46,8 @@ resource "aws_ec2_client_vpn_endpoint" "bazaar_vpn" {
     enabled = false
   }
 
-  # Use UDP for best performance
-  transport_protocol = "udp"
+  # --- FIX: Use TCP to avoid local UDP port conflicts ---
+  transport_protocol = "tcp"
   security_group_ids = [aws_security_group.vpn_sg.id]
   vpc_id             = var.vpc_id
   

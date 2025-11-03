@@ -1,0 +1,147 @@
+# Easy-RSA Type: server
+# Name: vpn-server.lockjlab.com
+
+<cert>
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            86:5b:c3:59:a1:56:2c:7c:a5:0e:dd:d9:86:d9:65:4c
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: CN=bazaar-ca
+        Validity
+            Not Before: Nov  2 19:41:01 2025 GMT
+            Not After : Feb  5 19:41:01 2028 GMT
+        Subject: CN=vpn-server.lockjlab.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:dd:81:96:75:6f:7c:48:ce:85:74:27:b7:39:2e:
+                    87:a0:26:27:41:4d:46:85:5f:45:00:51:38:5b:d2:
+                    bb:dd:50:ad:69:a9:0e:e3:da:c1:24:8f:dc:9d:1e:
+                    e3:0a:0b:22:ee:54:48:d6:10:d6:58:d0:9b:8b:0f:
+                    42:52:0b:3e:27:fe:b0:9e:6f:51:a3:62:34:b7:0d:
+                    82:30:5d:9b:5f:72:cb:93:78:08:ad:3e:92:51:1b:
+                    df:99:ba:23:63:16:94:b9:37:54:60:c9:72:4f:74:
+                    54:45:a2:f5:b7:f5:1e:f3:99:79:28:3b:19:66:1f:
+                    80:a2:6f:34:b1:0d:1d:bc:52:be:a4:de:86:54:e4:
+                    54:c1:ce:f3:1b:62:69:ea:d6:8e:8a:94:f5:02:9e:
+                    7a:7c:2b:12:89:28:14:89:1c:6a:42:6e:4e:97:c5:
+                    9c:ce:63:54:09:8d:21:3d:95:09:10:fb:e2:b8:8a:
+                    4a:ba:b1:8c:b2:be:5a:29:f4:1a:6c:00:9f:6c:57:
+                    c1:63:11:1e:b0:07:46:1d:c7:7f:68:6e:9d:9e:0d:
+                    83:07:9b:ea:69:a5:dc:29:d9:e5:f6:97:27:7a:98:
+                    b4:9d:14:c5:2a:13:60:a1:1e:b8:9d:3c:69:50:b1:
+                    85:6e:bd:23:db:d5:58:21:43:37:fb:dd:26:fa:ec:
+                    bb:71
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            X509v3 Subject Key Identifier: 
+                AA:80:6C:6C:42:4F:B4:C2:C2:05:C7:D4:4B:D2:40:50:6A:1B:0D:3D
+            X509v3 Authority Key Identifier: 
+                keyid:C4:8C:2E:6E:28:FE:02:8B:57:3D:A0:35:7F:1F:29:AD:EE:C9:B6:C5
+                DirName:/CN=bazaar-ca
+                serial:5F:AD:38:1E:A3:8C:53:48:D4:9E:70:04:F4:3A:09:BD:0F:06:71:B2
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication
+            X509v3 Key Usage: 
+                Digital Signature, Key Encipherment
+            X509v3 Subject Alternative Name: 
+                DNS:vpn-server.lockjlab.com
+    Signature Algorithm: sha256WithRSAEncryption
+    Signature Value:
+        82:b7:6e:c0:81:f4:e3:37:76:06:c4:28:8b:bd:72:d7:b8:74:
+        00:10:90:11:40:86:60:ca:7c:17:28:37:fc:2c:2e:08:d3:23:
+        4b:be:cb:c8:c5:15:05:21:bf:04:69:7d:38:1d:af:93:27:86:
+        53:23:3d:e7:67:c5:6b:e7:a4:65:13:4b:ce:ea:57:f1:c1:80:
+        b9:ec:b9:eb:21:8c:13:28:3f:a2:ef:36:e9:9d:2b:e2:f9:1a:
+        80:56:af:88:f0:49:00:b3:d0:86:a9:e0:57:d2:02:0b:57:39:
+        6e:39:c2:54:cf:24:be:02:c1:98:ef:1a:44:f8:0c:5c:3c:d7:
+        ff:35:cb:46:b5:24:28:9b:f7:df:a0:3d:53:00:90:52:46:94:
+        ef:bc:3a:0a:e7:d9:a2:13:60:7e:c3:76:e5:a3:36:0c:6e:c7:
+        c1:66:9c:09:84:29:22:0c:05:82:92:09:13:53:80:0a:d5:af:
+        3c:c9:d8:a7:31:cc:47:2b:10:8a:c8:a4:d9:02:88:ae:0c:7c:
+        ad:36:d4:99:fc:ee:f9:93:4a:8c:96:94:53:70:73:57:59:11:
+        48:c5:20:1e:cc:ba:05:7b:5a:4c:1b:f7:0a:60:d0:a2:ef:61:
+        6e:04:bb:08:fe:1f:1c:75:a1:75:67:11:f6:9d:3f:f7:59:c5:
+        db:e5:82:1d
+-----BEGIN CERTIFICATE-----
+MIIDhjCCAm6gAwIBAgIRAIZbw1mhVix8pQ7d2YbZZUwwDQYJKoZIhvcNAQELBQAw
+FDESMBAGA1UEAwwJYmF6YWFyLWNhMB4XDTI1MTEwMjE5NDEwMVoXDTI4MDIwNTE5
+NDEwMVowIjEgMB4GA1UEAwwXdnBuLXNlcnZlci5sb2NramxhYi5jb20wggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDdgZZ1b3xIzoV0J7c5LoegJidBTUaF
+X0UAUThb0rvdUK1pqQ7j2sEkj9ydHuMKCyLuVEjWENZY0JuLD0JSCz4n/rCeb1Gj
+YjS3DYIwXZtfcsuTeAitPpJRG9+ZuiNjFpS5N1RgyXJPdFRFovW39R7zmXkoOxlm
+H4CibzSxDR28Ur6k3oZU5FTBzvMbYmnq1o6KlPUCnnp8KxKJKBSJHGpCbk6XxZzO
+Y1QJjSE9lQkQ++K4ikq6sYyyvlop9BpsAJ9sV8FjER6wB0Ydx39obp2eDYMHm+pp
+pdwp2eX2lyd6mLSdFMUqE2ChHridPGlQsYVuvSPb1VghQzf73Sb67LtxAgMBAAGj
+gcQwgcEwCQYDVR0TBAIwADAdBgNVHQ4EFgQUqoBsbEJPtMLCBcfUS9JAUGobDT0w
+TwYDVR0jBEgwRoAUxIwubij+AotXPaA1fx8pre7JtsWhGKQWMBQxEjAQBgNVBAMM
+CWJhemFhci1jYYIUX604HqOMU0jUnnAE9DoJvQ8GcbIwEwYDVR0lBAwwCgYIKwYB
+BQUHAwEwCwYDVR0PBAQDAgWgMCIGA1UdEQQbMBmCF3Zwbi1zZXJ2ZXIubG9ja2ps
+YWIuY29tMA0GCSqGSIb3DQEBCwUAA4IBAQCCt27AgfTjN3YGxCiLvXLXuHQAEJAR
+QIZgynwXKDf8LC4I0yNLvsvIxRUFIb8EaX04Ha+TJ4ZTIz3nZ8Vr56RlE0vO6lfx
+wYC57LnrIYwTKD+i7zbpnSvi+RqAVq+I8EkAs9CGqeBX0gILVzluOcJUzyS+AsGY
+7xpE+AxcPNf/NctGtSQom/ffoD1TAJBSRpTvvDoK59miE2B+w3blozYMbsfBZpwJ
+hCkiDAWCkgkTU4AK1a88ydinMcxHKxCKyKTZAoiuDHytNtSZ/O75k0qMlpRTcHNX
+WRFIxSAezLoFe1pMG/cKYNCi72FuBLsI/h8cdaF1ZxH2nT/3WcXb5YId
+-----END CERTIFICATE-----
+</cert>
+
+<key>
+-----BEGIN PRIVATE KEY-----
+MIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDdgZZ1b3xIzoV0
+J7c5LoegJidBTUaFX0UAUThb0rvdUK1pqQ7j2sEkj9ydHuMKCyLuVEjWENZY0JuL
+D0JSCz4n/rCeb1GjYjS3DYIwXZtfcsuTeAitPpJRG9+ZuiNjFpS5N1RgyXJPdFRF
+ovW39R7zmXkoOxlmH4CibzSxDR28Ur6k3oZU5FTBzvMbYmnq1o6KlPUCnnp8KxKJ
+KBSJHGpCbk6XxZzOY1QJjSE9lQkQ++K4ikq6sYyyvlop9BpsAJ9sV8FjER6wB0Yd
+x39obp2eDYMHm+pppdwp2eX2lyd6mLSdFMUqE2ChHridPGlQsYVuvSPb1VghQzf7
+3Sb67LtxAgMBAAECggEATZP6Ry0BoVo7YUAbqrpCI/PY4cUXwtRoDUFk9Lvssgl0
+gsIEBgdyh8Se5qSPrc/Srxfz3o1NFRQStfRlLOjlHwrTftnMBOX7QnVHuHrAVQCW
+jhKHL23vvtp9SJDpneWltuzK747+Kxe6AB2f44rFCVoiFdYFAkBcRAegs7W9SVwm
+VcWCtLPqCeSnl0OXg3N+KGmHQPvds34ri+QbefbJvRGTRZilFegzWhRRb/E/fGOK
+Z+0tqrLP5ngEdPqRYou7c9DFjAY4weJYiVm2i4Ha0dzMtfL/Fce2r4ywr5+T/1xX
+stoQnRFxaBRuzMQ5hez+JE2N7IUIbm3rZTQ+5xaTlQKBgQD/UumZw9JMFvsArNoJ
+qciYaX9r8yFETIPQYiNZRhfZUDngt4k0ugHzg2v63lhGE5D6OF7So2+PBo7VoHPk
+rwznHmjapCejJk1CHPVf4Cffx+xXWCW4sFjkIFlUWOpnMQaeXMFWSs6UZIUGO/AF
+2wl3YxYDXJXfst4utgRHQiQliwKBgQDeF7/w4W8FbIHSBXp7RyTllw4n2rumo98U
+ciDPq+ClHNzFrvCLvdEm28/v/0RxBItSX37YENQDb4kIysfGrySdnqs96RXAjY/r
+LfSCfhERjkMufNco9bsoVrvvT4hIx//06YAstbBarg2DY6mgUjHRmlbmNaA/Xb0u
+n6VSkBdacwKBgQDU/sYBkGqPL1yVY51BEnJVMy0pUNofr/UGkdgLUX3zvAmMfY/o
+fIPEMY6S6YmabBg1pXD1J4KZPk9Jx2DnFWEeLTArtWWbpQgubxoDsWuSM6Xl95MA
+T5zYMmRTCRoCm9N5qMdgxWcwQ+r1GGtTdzaecfqbM1GUHBNdxFotV+/voQKBgQCx
+3Ydk3MZTK7FUh/qtnC6aiL1Xgb/jFz5jW3uXlelVkqXk09PltmE4o7YGWQNxF9iU
+YdJuLBv/nGW82tnf7wh+C0LNVEyNZ1IpYSZ/E4OL8ckwA980+IepKL1eTO2yjCoa
+9J4oMGJKXTaJUVnaAbnQSbDqsWvjE6mdG1IFq0xorQKBgQCBpvUw3kZZmq6ETBgY
+3zAD0IFVGxdb+A25MDdIagnC7GMPjlNmUNGqrwwYTz1Z3dYbiDlsLA+nZKUM89BO
+TjkS14kLbnthCkE0tU/bX5ycbUCrCtrRQ7uoyoM6dRED3XNX16/vTJjDA5PNP5r2
+mYZMNkDtqrN+msoyngIdNq5Evg==
+-----END PRIVATE KEY-----
+</key>
+
+<ca>
+-----BEGIN CERTIFICATE-----
+MIIDRTCCAi2gAwIBAgIUX604HqOMU0jUnnAE9DoJvQ8GcbIwDQYJKoZIhvcNAQEL
+BQAwFDESMBAGA1UEAwwJYmF6YWFyLWNhMB4XDTI1MTEwMjE5NDAzMloXDTM1MTAz
+MTE5NDAzMlowFDESMBAGA1UEAwwJYmF6YWFyLWNhMIIBIjANBgkqhkiG9w0BAQEF
+AAOCAQ8AMIIBCgKCAQEA2TNZUt/zpWpVosKzllzoLjaltg+h1U/B4T8+s4aUa0LR
+b2gIu0AmQL7g5mPe8Ot7gjJe/2Ttvu1wRt5IEGRHUTjmtz3p0zo0HuxuOmPOpV/8
+nqt/ZdUlqQFIoS6Za8aWYBfbLgsV9mQQCTTSEjl8nmJexlEyONVZHrXWS3cn2BsF
+qkEBnj5W+bymC29gy9+rNnoq2SQghnJmtClpS/TEWtEzIxKY8irrroMRSlHSaSJo
+PzFihKQ0BZX8WCTmTN7kr3xVGeimp0wKlCHyKK5WjShjmkySHamlxgdGja2BnJzF
+9z7jpBRupt7FenKU/LYaK4zmjvzGF3WNtldKiQ4zRwIDAQABo4GOMIGLMAwGA1Ud
+EwQFMAMBAf8wHQYDVR0OBBYEFMSMLm4o/gKLVz2gNX8fKa3uybbFME8GA1UdIwRI
+MEaAFMSMLm4o/gKLVz2gNX8fKa3uybbFoRikFjAUMRIwEAYDVQQDDAliYXphYXIt
+Y2GCFF+tOB6jjFNI1J5wBPQ6Cb0PBnGyMAsGA1UdDwQEAwIBBjANBgkqhkiG9w0B
+AQsFAAOCAQEAkbPu/Zs3OFYJFQRBr5ESQykdBY+egT/svDqFbBzylVkmDvLUrqJi
+yxjJHvZ4NCgnRP5Xbn/jOXzGZdBf2bPXFXaiuyirtkrtirjVvYN8JnErpcCReRN3
+F/R1LBOpXL3AfX2UJ2gfoJnAyyvjwf4UK7gaTG26jI/bBVNsI9jPE7UxjbbINxKT
+C3pdwpHy3A/0HVBPLHC5ZYcAEsvedlyedbCpjFhPS/kbwByM5mRPwAKAzgEhfL/n
+RLU/YK9lCaMIiWJvv60o+FOkRDCCBcpzyhGDMynASx7bZ/eHAjVezHcr6amiZnKW
+L6ZqRT2tctN7EVjTLxErdLuYegIcpyPv5w==
+-----END CERTIFICATE-----
+</ca>
+
