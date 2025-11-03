@@ -17,7 +17,7 @@ override.tf.json
 *.ovpn
 kubeconfig
 .kube/
-
+/infra/vpn-certs/
 # OS/IDE generated files
 .DS_Store
 .idea/
