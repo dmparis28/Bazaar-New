@@ -54,6 +54,8 @@ resource "aws_ec2_client_vpn_endpoint" "bazaar_vpn" {
     enabled = false
   }
 
+ # --- FIX: Enabled split-tunnel to allow internet access ---
+  split_tunnel = true
   # --- FIX: Use TCP to avoid local UDP port conflicts ---
   transport_protocol = "tcp"
   security_group_ids = [aws_security_group.vpn_sg.id]
